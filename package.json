@@ -30,6 +30,12 @@
 		"type": "git",
 		"url": "git+https://github.com/SaekiTominaga/customelements-button-share.git"
 	},
+	"keywords": [
+		"web-components",
+		"custom-elements",
+		"share",
+		"share-api"
+	],
 	"author": "Saeki Tominaga",
 	"license": "MIT",
 	"bugs": {
