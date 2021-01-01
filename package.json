@@ -1,6 +1,6 @@
 {
 	"name": "@saekitominaga/customelements-button-share",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Share button by Custom Elements.",
 	"type": "module",
 	"devDependencies": {
