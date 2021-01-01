@@ -15,9 +15,9 @@ var _text, _title, _url;
 /**
  * Share button
  *
- * @version 1.0.0
+ * @version 1.0.1
  */
-export default class ShareButton extends HTMLButtonElement {
+export default class ButtonShare extends HTMLButtonElement {
     constructor() {
         super();
         _text.set(this, void 0);
