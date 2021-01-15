@@ -13,4 +13,4 @@ export default class ButtonShare extends HTMLButtonElement {
      */
     private _clickEvent;
 }
-//# sourceMappingURL=ButtonShare.esm.d.ts.map
+//# sourceMappingURL=ButtonShare.d.ts.map

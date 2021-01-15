@@ -50,3 +50,4 @@ export default class ButtonShare extends HTMLButtonElement {
     }
 }
 _text = new WeakMap(), _title = new WeakMap(), _url = new WeakMap();
+//# sourceMappingURL=ButtonShare.js.map

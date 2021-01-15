@@ -2,7 +2,37 @@
 	"name": "@saekitominaga/customelements-button-share",
 	"version": "1.0.2",
 	"description": "Share button by Custom Elements.",
+	"keywords": [
+		"web-components",
+		"custom-elements",
+		"share",
+		"share-api"
+	],
+	"homepage": "https://github.com/SaekiTominaga/customelements-button-share#readme",
+	"bugs": {
+		"url": "https://github.com/SaekiTominaga/customelements-button-share/issues"
+	},
+	"license": "MIT",
+	"author": "Saeki Tominaga",
+	"files": [
+		"dist",
+		"src"
+	],
 	"type": "module",
+	"browser": "dist/ButtonShare.js",
+	"types": "dist/ButtonShare.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SaekiTominaga/customelements-button-share.git"
+	},
+	"scripts": {
+		"_build:tsc": "tsc -w",
+		"_build:compress": "onchange -f add -f change -v dist/ButtonShare.js -- brotlin compress dist/ButtonShare.js -m 1",
+		"_build:minify": "onchange -f add -f change -v dist/ButtonShare.js -- terser dist/ButtonShare.js -o dist/ButtonShare.min.js -c ecma=2020 --mangle --ecma 2020 --module --source-map content='dist/ButtonShare.js.map',filename='ButtonShare.js',includeSources,url='ButtonShare.min.js.map'",
+		"_build:minify-compress": "onchange -f add -f change -v dist/ButtonShare.min.js -- brotlin compress dist/ButtonShare.min.js -m 1",
+		"_build:minify-declaration": "onchange -f add -f change -v dist/ButtonShare.d.ts -- cpy dist/ButtonShare.d.ts dist --rename=ButtonShare.min.d.ts",
+		"build": "run-p _build:*"
+	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^4.10.0",
 		"@typescript-eslint/parser": "^4.10.0",
@@ -16,32 +46,6 @@
 		"terser": "^5.5.1",
 		"typescript": "^4.1.3"
 	},
-	"main": "dist/ButtonShare.esm.js",
-	"types": "dist/ButtonShare.esm.d.ts",
-	"scripts": {
-		"_ts-watch:tsc": "tsc -w",
-		"_ts-watch:compress": "onchange -f add -f change -v dist/ButtonShare.esm.js -- brotlin compress dist/ButtonShare.esm.js -m 1",
-		"_ts-watch:minify": "onchange -f add -f change -v dist/ButtonShare.esm.js -- terser dist/ButtonShare.esm.js -o dist/ButtonShare.min.esm.js -c ecma=2020 --mangle --ecma 2020 --module --source-map base=dist,filename=ButtonShare.esm.js,includeSources",
-		"_ts-watch:compress-minify": "onchange -f add -f change -v dist/ButtonShare.min.esm.js -- brotlin compress dist/ButtonShare.min.esm.js -m 1",
-		"_ts-watch:dts-minify": "onchange -f add -f change -v dist/ButtonShare.esm.d.ts -- cpy dist/ButtonShare.esm.d.ts dist --rename=ButtonShare.min.esm.d.ts",
-		"ts-watch": "run-p _ts-watch:*"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/SaekiTominaga/customelements-button-share.git"
-	},
-	"keywords": [
-		"web-components",
-		"custom-elements",
-		"share",
-		"share-api"
-	],
-	"author": "Saeki Tominaga",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/SaekiTominaga/customelements-button-share/issues"
-	},
-	"homepage": "https://github.com/SaekiTominaga/customelements-button-share#readme",
 	"publishConfig": {
 		"access": "public"
 	}
