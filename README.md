@@ -10,7 +10,7 @@ Share button using [Web Share API](https://www.w3.org/TR/web-share/) by Custom E
 
 ## Examples
 
-```
+```HTML
 <button type="button" is="x-share"
   data-share-text="Message text"
   data-share-title="Page title"
